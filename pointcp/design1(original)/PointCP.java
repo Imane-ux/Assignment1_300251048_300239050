@@ -14,13 +14,13 @@
  */
 public class PointCP
 {
-  //Instance variables ************************************************
-
-  /**
+  //Instance variables ************************************************ P no need for type
+/**
    * Contains C(artesian) or P(olar) to identify the type of
    * coordinates that are being dealt with.
    */
   private char typeCoord;
+  
   
   /**
    * Contains the current value of X or RHO depending on the type
