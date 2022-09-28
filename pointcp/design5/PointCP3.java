@@ -1,17 +1,5 @@
 public class PointCP3 extends PointCP5 {
-    //Instance variables ************************************************ 
-  
-  /**
-   * Contains the current value of X 
-   */
-  private double x;
-  
-  /**
-   * Contains the current value of Y value 
-   */
-  private double y;
-	
-  
+    
   //Constructors ******************************************************
 
   /**
@@ -19,8 +7,7 @@ public class PointCP3 extends PointCP5 {
    */
   public PointCP3(double xOrRho, double yOrTheta)
   {
-    this.x = xOrRho;
-    this.y = yOrTheta;
+    super(xOrRho, yOrTheta);
   }
 	
   
@@ -29,22 +16,22 @@ public class PointCP3 extends PointCP5 {
  
   public double getX()
   {
-    return x;
+    return xOrRho;
   }
   
   public double getY()
   {
-    return y;
+    return yOrTheta;
   }
   
   public double getRho()
   {
-    return (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)));
+    return (Math.sqrt(Math.pow(xOrRho, 2) + Math.pow(yOrTheta, 2)));
   }
   
   public double getTheta()
   {
-    return Math.toDegrees(Math.atan2(y, x));
+    return Math.toDegrees(Math.atan2(yOrTheta, xOrRho));
   }
   
 	
@@ -56,8 +43,8 @@ public class PointCP3 extends PointCP5 {
 
       //Calculate RHO and THETA
       double temp = getRho();
-      y = getTheta();
-      x = temp;
+      yOrTheta = getTheta();
+      xOrRho = temp;
 
 
   }

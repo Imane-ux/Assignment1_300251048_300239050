@@ -1,16 +1,5 @@
 public class PointCP2 extends PointCP5 {
-    /**
-   * Contains the current value of RHO depending on the type
-   * of coordinates.
-   */
-  private double rho;
-  
-  /**
-   * Contains the current value of THETA value depending on the
-   * type of coordinates.
-   */
-  private double theta;
-	
+    
   
   //Constructors ****************
 
@@ -19,10 +8,7 @@ public class PointCP2 extends PointCP5 {
    */
   public PointCP2(double xOrRho, double yOrTheta)
   {
-
-    this.rho = xOrRho;
-    this.theta = yOrTheta;
-   
+    super(xOrRho, yOrTheta);
   }
 	
   
@@ -31,22 +17,22 @@ public class PointCP2 extends PointCP5 {
  
   public double getX()
   {
-    return (Math.cos(Math.toRadians(theta)) * rho); 
+    return (Math.cos(Math.toRadians(yOrTheta)) * xOrRho); 
   }
   
   public double getY()
   {
-    return (Math.sin(Math.toRadians(theta)) * rho); 
+    return (Math.sin(Math.toRadians(yOrTheta)) * xOrRho); 
   }
   
   public double getRho()
   {
-    return rho;
+    return xOrRho;
   }
   
   public double getTheta()
   {
-    return theta;
+    return yOrTheta;
   }
   
 
@@ -58,8 +44,8 @@ public class PointCP2 extends PointCP5 {
     
       //Calculate X and Y
       double temp = getX();
-      theta = getY();
-      rho = temp;
+      yOrTheta = getY();
+      xOrRho = temp;
    
   }
    /**

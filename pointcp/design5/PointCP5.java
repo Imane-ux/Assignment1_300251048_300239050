@@ -3,8 +3,23 @@
  */
 public abstract class PointCP5 {
 
+    protected double xOrRho;
+    protected double yOrTheta;
+  
+  
+    //Instance methods ***
+    //i'll leave the constructor here,
+  public PointCP5(double xOrRho, double yOrTheta)
+    {
+  
+      this.xOrRho = xOrRho;
+      this.yOrTheta= yOrTheta;
+     
+    }
+
   //Instance methods ***
- 
+  //i'll leave the constructor here,
+
  
   public abstract double getX();
   
