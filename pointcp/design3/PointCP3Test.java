@@ -6,7 +6,7 @@ public class PointCP3Test {
   
       
       for (int j=0; j<10; j++){
-          System.out.print("Test number: "+(j+1));
+          System.out.print("Test number: "+(j+1) + "\n");
           long startTime = System.currentTimeMillis();
           for (int i=0; i<=2000000; i++){
               
@@ -21,7 +21,6 @@ public class PointCP3Test {
               
               
               pointa.getDistance(new PointCP3(0.0,0.0));
-              pointa.getDistance(new PointCP3(0.0,0.0));
               
               double r = (Math.random()*360.0);
               pointa.rotatePoint(r);
@@ -30,7 +29,7 @@ public class PointCP3Test {
           
           long stopTime = System.currentTimeMillis();
           long elapsedTime = stopTime-startTime;
-          System.out.println("\n 		Elapsed time of Design 3: "+ elapsedTime + " milliseconds");
+          System.out.println("Elapsed time of Design 3: "+ elapsedTime + " milliseconds");
         }
           
           
